@@ -3,7 +3,6 @@ import { IconButton, MD3Colors } from 'react-native-paper'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 const ProductItemComponent = ({ id, name, image, description, lat, lng, price }) => {
-   console.log(image)
     return (
         <SafeAreaView style={styles.safeArea}>
             <View style={styles.view}>
