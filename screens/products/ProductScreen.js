@@ -5,7 +5,7 @@ import ProductItemComponent from '../../components/ProductItemComponent'
 const ProductScreen = () => {
   const products = useSelector((state)=>state.products.products)
   return (
-    <View>
+    <View style={styles.container}>
       <FlatList data={products} renderItem={(item)=><ProductItemComponent {...item.item} /> } />
     </View>
   )
@@ -13,4 +13,8 @@ const ProductScreen = () => {
 
 export default ProductScreen
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container:{
+    marginTop:50,
+  }
+})
