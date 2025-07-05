@@ -1,10 +1,12 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { FlatList, StyleSheet, Text, View } from 'react-native'
+import { useSelector } from 'react-redux'
+import ProductItemComponent from '../../components/ProductItemComponent'
 
 const ProductScreen = () => {
+  const products = useSelector((state)=>state.products.products)
   return (
     <View>
-      <Text>ProductScreen</Text>
+      <FlatList data={products} renderItem={(item)=><ProductItemComponent {...item.item} /> } />
     </View>
   )
 }
